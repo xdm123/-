@@ -1,0 +1,40 @@
+<view>
+  <view class="set_goal" bindtap="setGoalFn">
+    <image src="../../images/setgoal.png"></image>
+  </view>
+  <text class="no_goal" wx:if='{{list.length == 0}}'>您还没有定制目标</text>
+  <view wx:else>
+    <view
+      class="goal_list"
+      wx:for="{{list}}"
+      wx:key='{{item.userid}}'
+      data-goalid='{{item.goal_id}}'
+    >
+     <view>目标：{{item.goal.goalname}}</view>
+     <view>开始：{{item.goal.start}}</view>
+     <view>打卡：{{item.goal.sign}} 天</view>
+     <image class="sign_pic" src="../../images/sign_1.png"></image>
+
+     <view class="signBtn" 
+     wx:if='{{status[index] == 1}}'
+     data-time='{{item.goal.signLastTime}}'
+     data-start='{{item.goal.start}}'
+     data-goalid='{{item._id}}'
+     data-num='{{item.goal.sign}}'
+     bindtap="signFn"
+     >打卡</view>
+
+     <view class="signBtnyi" 
+     wx:if='{{status[index] == 2}}'
+     data-time='{{item.goal.signLastTime}}'
+     data-start='{{item.goal.start}}'
+     >已打卡</view>
+
+     <view class="signBtnnot" 
+     wx:if='{{status[index] == 3}}'
+     data-time='{{item.goal.signLastTime}}'
+     data-start='{{item.goal.start}}'
+     >未开始</view>
+    </view>
+  </view>
+</view>

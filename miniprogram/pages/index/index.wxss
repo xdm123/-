@@ -1,0 +1,13 @@
+.index_text{
+  text-align: center;
+  line-height: 90rpx;
+  padding-top: 100rpx;
+}
+.login_btn{
+  font-size: 30rpx;
+  font-weight: 300;
+  position: fixed;
+  bottom:350rpx;
+  left:50%;
+  transform: translateX(-50%);
+}

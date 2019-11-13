@@ -1,0 +1,16 @@
+<view>
+  <text class="no_goal" wx:if='{{list.length == 0}}'>广场空空的</text>
+  <view wx:else>
+    <view class="list_wrap" wx:for='{{list}}' wx:key='{{index}}'>
+      <image class="headimg" src='{{item.goal.headimg}}'></image>
+      <view>{{item.goal.username}}
+        <image 
+        class="sex_pic"
+        src="{{item.goal.sex==''?'':item.goal.sex=='男'?'../../images/boy.png':'../../images/girl.png' }}"></image>
+      </view>
+      <text>目标：{{item.goal.goalname}}</text>
+      <text>已坚持：{{item.goal.sign}} 天</text>
+      <image class="sign_pic" src="../../images/sign_1.png"></image>
+    </view>
+  </view>
+</view>

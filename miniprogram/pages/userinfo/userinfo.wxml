@@ -1,0 +1,22 @@
+<view class="wrap">
+  <picker bindchange="bindPickerSex" value="{{index}}" range="{{sexArr}}">
+    性别
+    <text class="picker_ctn">{{sex}}</text>
+  </picker>
+</view>
+<view class="wrap">
+  <view class="age_wrap">
+    <text>年龄</text>
+    <slider 
+    min="0"
+    value="{{age}}"
+    max="100"
+    bindchange="sliderchange"
+    show-value
+    ></slider>
+    <text>
+    </text>
+  </view>
+</view>
+
+<button bindtap="saveInfo" class="save" type="primary">保存</button>

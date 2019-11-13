@@ -1,0 +1,49 @@
+/* miniprogram/pages/square/square.wxss */
+.no_goal{
+  color:#b4b2b2;
+  width:100%;
+  display: block;
+  text-align: center;
+  margin-top:200rpx;
+}
+.list_wrap{
+  width:75%;
+  padding:40rpx 40rpx;
+  padding-left:70rpx;
+  margin:20rpx auto;
+  border-radius:20rpx;
+  border:1px solid skyblue;
+  box-shadow: 5px 5px 5px #888888; 
+  position: relative;
+  font-size: 14px;
+  overflow: hidden;
+
+}
+.list_wrap text,.list_wrap view{
+  display: block;
+  width:calc(100% - 140rpx);
+  float:right;
+  line-height: 50rpx;
+}
+.headimg{
+  width:100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  float:left;
+  margin-right:40rpx;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+.sign_pic{
+  width:70rpx;
+  height:70rpx;
+  position: absolute;
+  left:0;
+  top:0;
+}
+.sex_pic{
+  width:30rpx;
+  height:30rpx;
+  vertical-align: middle;
+}

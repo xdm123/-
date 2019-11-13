@@ -1,0 +1,35 @@
+/* miniprogram/pages/userinfo/userinfo.wxss */
+.wrap{
+  padding-left:40rpx;
+  
+  line-height: 100rpx;
+}
+.section{
+  
+  
+  overflow: hidden;
+}
+picker{
+  width:100%;
+  display: block;
+  overflow: hidden;
+  border-bottom:1px solid #d4cece;
+  line-height: 100rpx;
+}
+
+.picker_ctn{
+  float:right;
+  margin-right:50rpx;
+}
+.age_wrap{
+  border-bottom:1px solid #d4cece;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.age_wrap slider{
+  width:79%;
+}
+.save{
+  margin-top: 200rpx;
+}

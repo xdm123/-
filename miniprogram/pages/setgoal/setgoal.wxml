@@ -1,0 +1,30 @@
+<view class="setgoal_wrap">
+  <view class="goal_title">1.目标或计划名称</view>
+  <input 
+  class="goal_input" 
+  type="text" 
+  placeholder="目标或计划名称" 
+  bindinput='goalNameFn'
+  maxlength="20"></input>
+  <view class="goal_title">2.目标或计划开始时间</view>
+  <picker mode="date" 
+    value="{{start}}" 
+    start="{{start}}" 
+    end="2200-01-01" 
+    bindchange="bindDateChangeStart">
+    <view class="data_picker">
+      {{start}}
+    </view>
+  </picker>
+  <!-- <view class="goal_title">3.目标或计划完成时间</view>
+  <picker mode="date" 
+    value="{{end}}" 
+    start="{{endt}}" 
+    end="2200-01-01" 
+    bindchange="bindDateChangeEnd">
+    <view class="data_picker">
+      {{end}}
+    </view>
+  </picker> -->
+  <button class="save_goal" type="primary" bindtap="saveGoalFn">保存目标</button>
+</view>

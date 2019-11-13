@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/square/square",
+    "pages/tid/tid",
+    "pages/follow/follow",
+    "pages/mine/mine",
+    "pages/userinfo/userinfo",
+    "pages/setgoal/setgoal",
+    "pages/goal/goal"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "小鸣打卡",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "backgroundColor": "#f4f4f4",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/square/square",
+        "text": "广场",
+        "iconPath": "./images/square_s.png",
+        "selectedIconPath": "./images/square.png"
+      },
+      {
+        "pagePath": "pages/goal/goal",
+        "text": "定目标",
+        "iconPath": "./images/goal_s.png",
+        "selectedIconPath": "./images/goal.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "个人中心",
+        "iconPath": "./images/mine_s.png",
+        "selectedIconPath": "./images/mine.png"
+      }
+    ]
+  }
+}

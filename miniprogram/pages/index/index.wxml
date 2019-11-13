@@ -1,0 +1,13 @@
+<view class="index_wrap">
+  <view class="index_text">
+    <view>欢迎来到小鸣打卡</view>
+    <view>在这里</view>
+    <view>记录你的每一次成长</view>
+  </view>
+  <button
+   class="login_btn" 
+   bindtap="goFn"
+   type="primary">
+    Go
+  </button>
+</view>
