@@ -2,12 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/square/square",
+    "pages/goal/goal",
     "pages/tid/tid",
     "pages/follow/follow",
     "pages/mine/mine",
     "pages/userinfo/userinfo",
     "pages/setgoal/setgoal",
-    "pages/goal/goal"
+    "pages/sign/sign"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

@@ -1,0 +1,44 @@
+/* miniprogram/pages/sign/sign.wxss */
+.sign_wrap{
+  padding:0 30rpx;
+  font-size: 14px;
+  position: relative;
+}
+.title{
+  line-height: 60rpx
+}
+.section{
+  margin-top:30rpx;
+  min-height: 300rpx;
+}
+.add_pic{
+  width:200rpx;
+  height:200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:1px dashed #999;
+}
+.add_pic image{
+  width:80%;
+  height:80%;
+}
+.sign_click{
+  width:90%;
+  font-weight: normal;
+  margin-top:100rpx;
+  
+}
+.choose_img{
+  overflow: hidden;
+}
+.choose_img view{
+  width:30%;
+  float:left;
+  margin-right:3.333%;
+}
+.file_pic{
+  width:100%;
+  height:200rpx;
+}
+

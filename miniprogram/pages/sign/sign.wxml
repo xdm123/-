@@ -1,0 +1,28 @@
+<view class="sign_wrap">
+  
+  <view class="title">目标：{{name}}</view>
+  <view class="title">已打卡：{{num}} 天</view>
+  <view class="title">上次打卡时间：{{lasttime}} </view>
+  <view class="section">
+    <textarea 
+    auto-height 
+    bindinput='getSentence'
+    auto-focus
+    maxlength="200"
+    placeholder="分享你的心得，故事" />
+  </view>
+
+  <view class="choose_img" >
+    <view wx:for='{{filepath}}' wx:key="{{index}}">
+      <image  
+      mode='aspectFill'
+      class="file_pic" 
+      src="{{item}}"></image>
+    </view>
+  </view>
+  
+  <view class="add_pic" wx:if='{{filepath.length < 3}}' bindtap="addPicFn"> 
+    <image src="../../images/addpic.png"></image>
+  </view>
+  <button bindtap="signClick" type="primary" class="sign_click">打卡</button>
+</view>

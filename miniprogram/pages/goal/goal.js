@@ -127,6 +127,7 @@ Page({
           list: data.data,
           status: statusarr
         })
+        console.log(_this.data.list)
       }
     })
   },
@@ -165,31 +166,38 @@ Page({
   },
 
   signFn:function(e){
-    var _this = this
     var lasttime = e.currentTarget.dataset.time
     var goalid = e.currentTarget.dataset.goalid
     var signNum = e.currentTarget.dataset.num
-    console.log(_this.data.nowtime)
-    var db = wx.cloud.database();
-    var goallist = db.collection('goalList')
-    goallist.doc(goalid).update({
-      data:{
-        goal:{
-          signLastTime: _this.data.nowtime,
-          sign: parseInt(signNum) + 1
-        }
-      },
-      success:function(res){
-        wx.showToast({
-          title: '打卡成功',
-        })
-        console.log('打卡成功',res)
-        _this.getdata()
-      },
-      fail:function(){
-        console.log('打卡失败')
-      }
+    var name = e.currentTarget.dataset.name
+    wx.navigateTo({
+      url: '../sign/sign?goalid=' + goalid + '&signnum=' + signNum + '&lasttime=' + lasttime + '&name='+ name,
     })
+    // var _this = this
+    // var lasttime = e.currentTarget.dataset.time
+    // var goalid = e.currentTarget.dataset.goalid
+    // var signNum = e.currentTarget.dataset.num
+    // console.log(_this.data.nowtime)
+    // var db = wx.cloud.database();
+    // var goallist = db.collection('goalList')
+    // goallist.doc(goalid).update({
+    //   data:{
+    //     goal:{
+    //       signLastTime: _this.data.nowtime,
+    //       sign: parseInt(signNum) + 1
+    //     }
+    //   },
+    //   success:function(res){
+    //     wx.showToast({
+    //       title: '打卡成功',
+    //     })
+    //     console.log('打卡成功',res)
+    //     _this.getdata()
+    //   },
+    //   fail:function(){
+    //     console.log('打卡失败')
+    //   }
+    // })
   },
 
   /**

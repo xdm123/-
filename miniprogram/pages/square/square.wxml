@@ -1,16 +1,45 @@
 <view>
   <text class="no_goal" wx:if='{{list.length == 0}}'>广场空空的</text>
-  <view wx:else>
+  <!-- <view></view> -->
+  <view class="list" wx:else>
     <view class="list_wrap" wx:for='{{list}}' wx:key='{{index}}'>
-      <image class="headimg" src='{{item.goal.headimg}}'></image>
-      <view>{{item.goal.username}}
-        <image 
-        class="sex_pic"
-        src="{{item.goal.sex==''?'':item.goal.sex=='男'?'../../images/boy.png':'../../images/girl.png' }}"></image>
+      <view class="list_inner">
+        <view class="list_top">
+          <image class="headimg" src='{{item.headimg}}'></image>
+          {{item.username}}
+          <image 
+          class="sex_pic"
+          src="{{item.sex==''?'':item.sex=='男'?'../../images/boy.png':'../../images/girl.png' }}"></image>
+          <text>累计打卡：{{item.signnum}} 天</text>
+        </view>
+        <view class='goalname'>{{item.goalname}}</view>
+        <view class='sentence' wx:if='{{item.sentence != ""}}'>{{item.sentence}}</view>
+        <view class='sentence' wx:else>本次打卡没有发表感想</view>
+        <view class="loop_pic">
+          <view wx:for='{{item.imgs}}'  
+          wx:key='{{index}}'
+          wx:for-item='imgitem'
+          data-src='{{imgitem}}'
+          data-imgarr='{{item.imgs}}' bindtap="previewPic">
+            <image
+              lazy-load='true'
+              mode='aspectFill'
+             src="{{imgitem}}"></image>
+          </view>
+          
+        </view>
+        <view class="like" bindtap="likeFn">
+          <view>
+            <image src="../../images/like.png"></image>
+          </view>
+          <view>
+            <image src="../../images/pl.png"></image>
+          </view>
+          <view>
+            <image src="../../images/share.png"></image>
+          </view>
+        </view>
       </view>
-      <text>目标：{{item.goal.goalname}}</text>
-      <text>已坚持：{{item.goal.sign}} 天</text>
-      <image class="sign_pic" src="../../images/sign_1.png"></image>
     </view>
   </view>
 </view>

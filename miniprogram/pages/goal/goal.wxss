@@ -27,8 +27,7 @@
   padding-left:70rpx;
   margin:20rpx auto;
   border-radius:20rpx;
-  border:1px solid skyblue;
-  box-shadow: 5px 5px 5px #888888; 
+  border:1px solid #999;
   position: relative;
   font-size: 14px;
 }

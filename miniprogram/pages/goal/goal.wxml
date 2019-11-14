@@ -21,6 +21,7 @@
      data-start='{{item.goal.start}}'
      data-goalid='{{item._id}}'
      data-num='{{item.goal.sign}}'
+     data-name='{{item.goal.goalname}}'
      bindtap="signFn"
      >打卡</view>
 
